@@ -28,3 +28,6 @@ docker stop greedy_games_assignment
 ## Basic concept:
 1. Used nested struct to mimic a tree structure
 2. Leaves of tree are represented as a map
+
+## Postman Collection:
+Attached in root directory of project "GreedyGame.postman_collection.json"
