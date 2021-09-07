@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "d3dbf6a6-46f3-4e61-bf67-cd95cfcbab82",
+		"name": "GreedyGame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}health",
+					"host": [
+						"{{URL}}health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}health",
+							"host": [
+								"{{URL}}health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Sep 2021 08:56:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Healthy\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"countryName\": \"India\",\n    \"deviceName\": \"android\",\n    \"webRequest\": 3,\n    \"timeSpent\": 25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}insert",
+					"host": [
+						"{{URL}}insert"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Insert",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryName\": \"India\",\n    \"deviceName\": \"ios\",\n    \"webRequest\": 2,\n    \"timeSpent\": 25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}insert",
+							"host": [
+								"{{URL}}insert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Sep 2021 09:00:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Inserted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"countryName\": \"\",\n    \"deviceName\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}fetch",
+					"host": [
+						"{{URL}}fetch"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch Only IOS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryName\": \"\",\n    \"deviceName\": \"ios\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fetch",
+							"host": [
+								"{{URL}}fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Sep 2021 09:01:06 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timeSpent\": 25,\n    \"webRequest\": 2\n}"
+				},
+				{
+					"name": "Fetch All India",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryName\": \"India\",\n    \"deviceName\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fetch",
+							"host": [
+								"{{URL}}fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Sep 2021 09:01:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timeSpent\": 50,\n    \"webRequest\": 4\n}"
+				},
+				{
+					"name": "Fetch ALL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryName\": \"\",\n    \"deviceName\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fetch",
+							"host": [
+								"{{URL}}fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Sep 2021 09:02:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timeSpent\": 50,\n    \"webRequest\": 4\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:9000/"
+		}
+	]
+}
