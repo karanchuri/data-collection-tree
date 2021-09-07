@@ -10,6 +10,12 @@ https://golang.org/doc/install
 ## Install Docker in Ubuntu:
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
+## To initialize and start in foreground:
+```bash
+sudo chmod u+x init.sh
+./init.sh
+```
+
 ## To run Docker in Detached mode (Background):
 ```bash
 docker run --name greedy_games_assignment -d -p 9000:9000 greedy_games_assignment
